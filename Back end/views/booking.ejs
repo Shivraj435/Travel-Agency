@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+</head>
+<body>
+    <h2 style="color: black; font-size: 3rem;font-family: Arial, Helvetica, sans-serif;text-align: center;">Booked Users</h2>
+    <br>
+    <br>
+    <div class="booked-user">
+
+<% if (newBooking.length === 0) { %>
+            <!-- No results message -->
+            <p style="text-align: center; font-size: 2rem; font-weight: 700;">No Users Booked.</p>
+        <% } else { %>
+            <% for (let bookUsername of newBooking) { %>
+                <p style="color: black;font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;">Location:-<%= bookUsername.Location %></p>
+                <p  style="color: black;font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;">Arrival date:-<%=bookUsername.Arrival %></p>
+                <p style="color: black;font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;">Leaving date:-<%=bookUsername.Leaving %></p>
+                <p style="color: black;font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;">Total Persons:-<%=bookUsername.Persons %></p>
+                <p style="color: black;font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;">Total Price:-<%=bookUsername.Price %></p>
+                <hr>
+                <% } %>
+                <% } %>
+
+    </div>
+</body>
+</html>

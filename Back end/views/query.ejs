@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Query</title>
+</head>
+<body>
+    <h2 style="color: black; font-size: 3rem;font-family: Arial, Helvetica, sans-serif;text-align: center;">Booked Users</h2>
+    <br>
+    <br>
+    <div class="booked-user">
+
+<% if (newQueries.length === 0) { %>
+            <!-- No results message -->
+            <p style="text-align: center; font-size: 2rem; font-weight: 700;">No User Queries</p>
+        <% } else { %>
+            <% for (let userQuery of newQueries) { %>
+                <p style="color: black;font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;">User Name:-<%= userQuery.username %></p>
+                <p  style="color: black;font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;">Email:-<%=userQuery.email %></p>
+                <p style="color: black;font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;">Subject:-<%=userQuery.subject %></p>
+                <p style="color: black;font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;">Message:-<%=userQuery.message %></p>
+             
+                <hr>
+                <% } %>
+                <% } %>
+
+    </div>
+</body>
+</html>
